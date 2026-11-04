@@ -1,0 +1,263 @@
+{
+  "retrieved": "2026-10-23",
+  "assets": [
+    {
+      "local": "/public/brand/fonts/favorit-regular.woff2",
+      "url": "https://goingtobreakpoint.com/fonts/favorit-regular.woff2",
+      "bytes": 33888,
+      "sha256": "6ec3b84234088f8eb9f0a8e5b6c01c32e17571a285884322229815bbe8f2e0d3"
+    },
+    {
+      "local": "/public/brand/fonts/bp26-extended.woff2",
+      "url": "https://goingtobreakpoint.com/fonts/bp26-extended.woff2",
+      "bytes": 12716,
+      "sha256": "82e68397532b8ef5398f9930e68464370cfacaf23c4b7c54510dad0152fcc6ed"
+    },
+    {
+      "local": "/public/brand/breakpoint.svg",
+      "url": "https://goingtobreakpoint.com/t/breakpoint.svg",
+      "bytes": 5500,
+      "sha256": "c3f277af75684abd3e52a758c6e44f5dee7063aea68162c96b3e7d17a3a3a224"
+    },
+    {
+      "local": "/public/chapters/ae.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/uae.png",
+      "bytes": 1803,
+      "sha256": "181c813d5c0c37312ec1eeba20e089ad5d7fad76f299ae2ea4c34ca57706d0b1"
+    },
+    {
+      "local": "/public/chapters/es.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/spain.jpg",
+      "bytes": 12417,
+      "sha256": "3ddb743c52156e3a3055892a1b8bee6b41bb5c57b60faaf22097c4b21458e13d"
+    },
+    {
+      "local": "/public/chapters/pl.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/poland.png",
+      "bytes": 3917,
+      "sha256": "170ad4a446a74db4ed014ee4c486314f853d3b7201a242a49bb6bcdcb851abf2"
+    },
+    {
+      "local": "/public/chapters/br.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/brazil.png",
+      "bytes": 21725,
+      "sha256": "2e8303e49f1b05c12cee53813d877a21fdb30a170ab1860e671a244863d80e06"
+    },
+    {
+      "local": "/public/chapters/ua.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/ukraine.jpg",
+      "bytes": 9290,
+      "sha256": "b3d5fc668476787395284795f59f6a3a15dac981a600f6d5cc62c8b2a144e1e4"
+    },
+    {
+      "local": "/public/chapters/nl.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/netherlands.jpg",
+      "bytes": 10115,
+      "sha256": "9b52ebe722af309dd4a272debb761060d6b275dcec43984043d3d99ec50a05f2"
+    },
+    {
+      "local": "/public/chapters/kz.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/kazakhstan",
+      "bytes": 2595,
+      "sha256": "9206ecaaf41f193697cc60955566b3073dd376bb6ce04ddce53293f39672ac3a"
+    },
+    {
+      "local": "/public/chapters/ar.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/argentina.jpg",
+      "bytes": 10718,
+      "sha256": "46f5b17f1abd41e37a0240690090b429a7e9a4b2476ec9adbf274b91698ab10c"
+    },
+    {
+      "local": "/public/chapters/th.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/thailand.png",
+      "bytes": 4281,
+      "sha256": "3ef881b599de43b494c7aaf9515294322a5f66690612a992f15e293d2406124b"
+    },
+    {
+      "local": "/public/chapters/vn.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/vietnam",
+      "bytes": 345758,
+      "sha256": "ac5f9a1f92cfbd74b6146c6ae4d372901c241831d51fa6549c5f016835cb298e"
+    },
+    {
+      "local": "/public/chapters/jp.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/japan.png",
+      "bytes": 3811,
+      "sha256": "6f3ce7f87200626a1161a7ca081c999ad4080fc2e8e0ecaea8dc1443a4a4bbda"
+    },
+    {
+      "local": "/public/chapters/sg.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/singapore.png",
+      "bytes": 9008,
+      "sha256": "67282f00d0c3b3d457ba6691095daa437500650cd7f1853bd58b96eb4c603441"
+    },
+    {
+      "local": "/public/chapters/balkan.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/balkan.png",
+      "bytes": 15140,
+      "sha256": "038ca47e8965f4ce354ccad038d6fe2acc5ddf508d27e2954f542bd2fae8a15e"
+    },
+    {
+      "local": "/public/chapters/kr.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/korea.png",
+      "bytes": 5358,
+      "sha256": "7baa62224afce5b8edc8bba30984a97002324e43205d705133ab6a2eaca05650"
+    },
+    {
+      "local": "/public/chapters/de.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/germany.jpg",
+      "bytes": 8846,
+      "sha256": "fc3520955390fa3f6ed8f713072cb5118611f60f55a387260f80d380ee65f9db"
+    },
+    {
+      "local": "/public/chapters/us.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/usa",
+      "bytes": 3131,
+      "sha256": "c02ae8db738709b4fb3d6d328ad0ddc719e25308971204616a58196a48e7cdf5"
+    },
+    {
+      "local": "/public/chapters/ie.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/ireland.jpg",
+      "bytes": 7017,
+      "sha256": "9701afd7ae5baf60a364844afdf5ec29d70441210be5caf662c960d2427b0ea5"
+    },
+    {
+      "local": "/public/chapters/ge.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/georgia.jpg",
+      "bytes": 13110,
+      "sha256": "2c2c96d9658111733f28b8b38713890cd67f900097b430cf4877a53f8e2b2722"
+    },
+    {
+      "local": "/public/chapters/uk.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/uk.png",
+      "bytes": 3043,
+      "sha256": "e608ac4c97d2bdd8bc9b249a776a83a2f41c0ffc22c3961833ade84c10cb7b56"
+    },
+    {
+      "local": "/public/chapters/my.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/malaysia.jpg",
+      "bytes": 5763,
+      "sha256": "248be04b6e88cb7106e97f6cf829d9b907f6d3345d6cf0ff0d694c0f0e251de8"
+    },
+    {
+      "local": "/public/chapters/tr.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1732825014/assets/superteams/logos/turkey.jpg",
+      "bytes": 5211,
+      "sha256": "505760351ce8aa4708d5494b6ab4a6e167b52ea5cfed2b850e5b10728c34b9c1"
+    },
+    {
+      "local": "/public/chapters/ca.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1779083445/IMG_3222_rzwlit.jpg",
+      "bytes": 48091,
+      "sha256": "07c8de254fd6a3ec76b4c6e9ff98e66a84ad093a2ab973e12497626341a1f6b2"
+    },
+    {
+      "local": "/public/chapters/in.jpg",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/india.jpg",
+      "bytes": 5841,
+      "sha256": "4a073bedcf98a151bf24cef09c7df8d73b3c71810967fe69efdb747c401f7fbf"
+    },
+    {
+      "local": "/public/chapters/au.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/v1772436841/2_avgpvg.png",
+      "bytes": 62643,
+      "sha256": "89326418b45813b48c96d5c611c57fb80f0e97fa8de78eceb39a4f3f8f293e81"
+    },
+    {
+      "local": "/public/chapters/ng.png",
+      "url": "https://res.cloudinary.com/dgvnuwspr/image/upload/assets/superteams/logos/nigeria.png",
+      "bytes": 11501,
+      "sha256": "a25b7a05ab9b4458493bf7d4b3ab22c4597340c6a98ebd5235f5dcbec44f450a"
+    },
+    {
+      "local": "/public/chapters/it.jpg",
+      "url": "https://goingtobreakpoint.com/logo/it.jpg",
+      "bytes": 9273,
+      "sha256": "bec8b23cbd27f5eb78f2ab059f0315635b6672c63d0b9c2b0be7147f881fdacb"
+    },
+    {
+      "local": "/public/chapters/fr.jpg",
+      "url": "https://goingtobreakpoint.com/logo/fr.jpg",
+      "bytes": 11828,
+      "sha256": "126fcf3434bc40661f6d17b3dc0071e9dc5ba002e2784227fdc26a1ed94a1607"
+    },
+    {
+      "local": "/public/brand/reference/de.jpg",
+      "url": "https://goingtobreakpoint.com/t/de.jpg",
+      "bytes": 131157,
+      "sha256": "b05b98e631b57296e4d734b2fb4cdab3e3735caea998367ca9533187798f40a0"
+    },
+    {
+      "local": "/public/brand/reference/nl.jpg",
+      "url": "https://goingtobreakpoint.com/t/nl.jpg",
+      "bytes": 159336,
+      "sha256": "8cfce4a34623b6bc944218b1142f4cde7e97508ebc57a889fd8126b43b4c47e8"
+    },
+    {
+      "local": "/public/brand/reference/ie.jpg",
+      "url": "https://goingtobreakpoint.com/t/ie.jpg",
+      "bytes": 85364,
+      "sha256": "b4d1f1786d5a4eff9dab69e2e9512ee62476fc9b2b258ce5c8211c5f6142e7d5"
+    },
+    {
+      "local": "/public/brand/reference/ie-over.png",
+      "url": "https://goingtobreakpoint.com/t/ie-over.png",
+      "bytes": 14718,
+      "sha256": "529b1a1bda95604db54a1e9c506de9bf4de949f7392d8c815244bdddc4d2f114"
+    },
+    {
+      "local": "/public/brand/reference/pl.jpg",
+      "url": "https://goingtobreakpoint.com/t/pl.jpg",
+      "bytes": 56421,
+      "sha256": "e80fc2fa82e95c9ddd829b7aaed178d37d56fc252428efdb1d48962349308fc8"
+    },
+    {
+      "local": "/public/brand/reference/it-london.jpg",
+      "url": "https://goingtobreakpoint.com/t/it-london.jpg",
+      "bytes": 95030,
+      "sha256": "455c5b98100d1ece9aa8605d233b92ee70268f46cc8bc0c68f9035139ca77514"
+    },
+    {
+      "local": "/public/brand/reference/tr.jpg",
+      "url": "https://goingtobreakpoint.com/t/tr.jpg",
+      "bytes": 151543,
+      "sha256": "83036036fc7266edcdfd2a33fda9f96a22f8156ef9ad48a7b3b38e0fc97c1971"
+    },
+    {
+      "local": "/public/brand/reference/br.jpg",
+      "url": "https://goingtobreakpoint.com/t/br.jpg",
+      "bytes": 170804,
+      "sha256": "bd62df90826dccb7e6e4bc10d837fc598e21eba044bd02a79c1c01e865ef2677"
+    },
+    {
+      "local": "/public/brand/reference/ca.jpg",
+      "url": "https://goingtobreakpoint.com/t/ca.jpg",
+      "bytes": 132979,
+      "sha256": "abfb8e182754111de0712749c0f60067f6b3dfed62e75e0424e8f7c2ea78a86c"
+    },
+    {
+      "local": "/public/brand/reference/ca-over.png",
+      "url": "https://goingtobreakpoint.com/t/ca-over.png",
+      "bytes": 45402,
+      "sha256": "78097c901b3b4a5dc8c0ced7913f701ae355941659703dd0eaaf8afd5275a576"
+    },
+    {
+      "local": "/public/brand/bp26-mark.svg",
+      "url": "https://solana.com/breakpoint-assets/assets/nav-bp26.svg",
+      "bytes": 1785,
+      "sha256": "f8e21457a1c31b585cc0a7e8ad0348dfb4e40aa054242c93e7046bd8f47c9d59"
+    },
+    {
+      "local": "/public/brand/pixel-edge.svg",
+      "url": "https://solana.com/breakpoint-assets/assets/pixel-edge.svg",
+      "bytes": 435,
+      "sha256": "ca73ff0cae7a8a018df7be86a368bdc13286edbd8308c6106311a971b345ddc1"
+    },
+    {
+      "local": "/public/brand/official-breakpoint-wordmark.svg",
+      "url": "https://solana.com/breakpoint-assets/assets/breakpoint-footer-logo-desktop.svg",
+      "bytes": 5643,
+      "sha256": "556146ec953fc4466a8deea941e741fb7fb1a0048d7750f3b3dc4acc30308bcb"
+    }
+  ]
+}

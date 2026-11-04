@@ -1,0 +1,7 @@
+@font-face { font-family:'Breakpoint Display'; src:url('/brand/fonts/bp26-extended.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+@font-face { font-family:'Favorit'; src:url('/brand/fonts/favorit-regular.woff2') format('woff2'); font-weight:400; font-style:normal; font-display:swap; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:24px; }
+body { margin:0; background:#0b0b0b; color:#fff; font-family:'Favorit',Arial,sans-serif; }
+button,input,select { font:inherit; }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

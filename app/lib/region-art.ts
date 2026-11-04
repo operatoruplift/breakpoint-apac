@@ -1,0 +1,414 @@
+/** Original architectural illustrations, drawn locally into the export canvas.
+ * These are regional references, not official chapter or event artwork.
+ */
+type RegionalIllustration = {
+  label: string;
+  silhouette: string;
+  detail: string;
+  motif: 'lotus' | 'flow' | 'blossom' | 'petals' | 'orchid' | 'batik' | 'mandala' | 'stars' | 'shanyrak' | 'arches' | 'grid' | 'waves' | 'knot' | 'rosette' | 'mosaic' | 'sun' | 'weave';
+};
+
+const ART: Record<string, RegionalIllustration> = {
+  vn: {
+    label: 'Lotus lines · Saigon skyline', motif: 'lotus',
+    silhouette: 'M240 400V316H284V400ZM310 400V284H366V400ZM388 400V184L428 164V88L444 72V164L482 184V400ZM510 400V235H568V400ZM592 400V292H646V400ZM676 400V272H718V230H752V272H794V400ZM832 400V164H880V400Z',
+    detail: 'M400 184H472M400 214H472M400 244H472M400 274H472M400 304H472M400 334H472M400 364H472M388 188L482 170M398 185L482 195M850 164V400M860 164V400M840 200H872M840 230H872M840 260H872M840 290H872M840 320H872M840 350H872M682 300H788M696 400V320H718V400M750 400V320H772V400M684 272L736 249L788 272M726 230L736 212L746 230M320 310H356M320 340H356M320 370H356',
+  },
+  kr: {
+    label: 'Hanok rooflines · N Seoul Tower', motif: 'flow',
+    silhouette: 'M230 400V348H300V400ZM350 400V330H432V400ZM462 400V278H504V400ZM516 400V306H566V400ZM646 400L662 207H650V190H672V94H680V190H702V207H690L706 400ZM754 400V338H904V400ZM730 338Q788 329 829 291Q863 326 925 338L914 348H742Z',
+    detail: 'M658 197H696M664 216H688M668 248H686M670 280H688M673 312H691M666 105H686M676 94V52M650 190L676 177L702 190M763 365H895M777 348V400M811 348V400M846 348V400M880 348V400M766 332Q797 329 829 305Q857 328 889 333M366 349H416M366 371H416M473 300H493M473 326H493M473 352H493M473 378H493',
+  },
+  jp: {
+    label: 'Mount Fuji · Torii · Sakura', motif: 'blossom',
+    silhouette: 'M190 400L354 205L392 239L423 203L602 400ZM640 400L675 221L684 120H690L700 221L740 400ZM778 400V294H792V400ZM880 400V294H894V400ZM758 278Q836 294 914 278L907 299Q836 313 765 299ZM765 325H908V338H765Z',
+    detail: 'M305 263L340 286L354 252L382 271L392 239M423 203L439 250L458 242L483 269M675 221H700M670 245H706M665 270H713M658 299H719M649 339H729M684 120V82M678 154H697M660 306L720 339M672 253L711 270M792 305V400M880 305V400M816 338V400M856 338V400M240 400H930',
+  },
+  th: {
+    label: 'Wat Arun prang · Thai rooflines', motif: 'petals',
+    silhouette: 'M240 400V354H348V400ZM222 354Q269 344 294 312Q319 344 367 354L356 366H235ZM440 400L454 352L460 294L472 274L484 226L492 218L500 165L510 136L520 165L528 218L536 226L548 274L560 294L566 352L580 400ZM620 400L632 350L642 327L652 280L662 327L672 350L684 400ZM740 400V344H896V400ZM719 344Q779 330 820 284Q860 330 919 344L906 359H734Z',
+    detail: 'M458 352H563M460 337H560M465 314H555M468 294H551M477 274H543M485 252H536M490 229H532M497 207H525M501 183H520M510 137V102M484 400V367H536V400M636 350H674M645 329H665M753 359V400M786 359V400M823 359V400M859 359V400M890 359V400M756 341L820 299L885 341M270 367V400M312 367V400',
+  },
+  sg: {
+    label: 'Marina Bay · Supertree canopy', motif: 'orchid',
+    silhouette: 'M225 400V332H270V400ZM310 400V282H354V400ZM426 400L438 235H478L490 400ZM512 400L524 235H564L576 400ZM598 400L610 235H650L662 400ZM411 235Q515 218 677 220L664 238Q518 249 420 247ZM760 400L775 298L739 268L722 234Q775 251 796 232Q828 254 865 235L850 271L814 298L828 400Z',
+    detail: 'M446 254H475M444 281H479M442 308H481M440 335H483M438 362H486M532 254H561M530 281H565M528 308H567M526 335H569M524 362H572M618 254H647M616 281H651M614 308H653M612 335H655M610 362H658M737 249L795 285L851 251M748 275L795 285L840 275M775 298H814M780 322H817M777 347H821M773 371H824M795 285V400M242 343V400M328 295V400',
+  },
+  my: {
+    label: 'Petronas towers · Batik geometry', motif: 'batik',
+    silhouette: 'M226 400V315H292V400ZM345 400V299H384V260H394V207H404V167H414V145H424V98H430V145H440V167H450V207H460V260H470V299H506V400ZM565 400V299H601V260H611V207H621V167H631V145H641V98H647V145H657V167H667V207H677V260H687V299H726V400ZM506 282H565V299H506ZM786 400V294H840V400ZM868 400V340H914V400Z',
+    detail: 'M394 229H460M394 249H460M384 273H470M384 293H470M364 320H486M364 343H486M364 366H486M404 190H450M414 159H440M611 229H677M611 249H677M601 273H687M601 293H687M582 320H706M582 343H706M582 366H706M621 190H667M631 159H657M427 166V400M644 166V400M506 282L565 299M506 299L565 282M797 310H829M797 336H829M797 362H829',
+  },
+  in: {
+    label: 'Gateway arch · Mandala geometry', motif: 'mandala',
+    silhouette: 'M230 400V303H281V400ZM315 400V253H370V400ZM438 400V273H464V243H488V230H500V202H510V230H522V243H670V230H682V202H692V230H704V243H728V273H754V400H674V335Q674 292 596 292Q518 292 518 335V400ZM480 243Q497 213 514 243ZM678 243Q695 213 712 243ZM803 400V283H850V400ZM876 400V334H923V400Z',
+    detail: 'M451 278H741M451 300H504M688 300H741M451 386H504M688 386H741M472 280V386M492 280V386M711 280V386M731 280V386M544 400V341Q544 313 596 313Q648 313 648 341V400M532 263H660M532 275H660M565 252V282M596 252V282M627 252V282M326 278H359M326 304H359M326 330H359M326 356H359M326 382H359',
+  },
+  au: {
+    label: 'Sydney sails · Southern Cross', motif: 'stars',
+    silhouette: 'M222 400V323H267V400ZM303 400V286H353V400ZM391 400L408 380H896L919 400ZM431 380Q445 292 478 254Q501 323 523 380ZM486 380Q528 248 601 206Q599 319 615 380ZM558 380Q624 252 697 239Q671 323 674 380ZM650 380Q721 290 787 293Q745 345 740 380ZM742 380Q793 320 849 339L827 380Z',
+    detail: 'M431 380L478 254L523 380M486 380L601 206L615 380M558 380L697 239L674 380M650 380L787 293L740 380M742 380L849 339L827 380M407 385H901M418 393H908M242 336V400M323 299V400M410 412Q506 405 600 412T789 412T947 412',
+  },
+  kz: {
+    label: 'Baiterek · Shanyrak geometry', motif: 'shanyrak',
+    silhouette: 'M224 400V323H272V400ZM309 400V279H357V400ZM410 400L449 280L458 219Q428 194 438 166Q449 139 479 138Q512 139 522 166Q532 194 502 219L510 280L549 400ZM609 400V285L669 228L730 285V400ZM781 400V308H852V400ZM884 400V349H930V400Z',
+    detail: 'M454 218L436 400M466 221L464 400M479 223V400M492 221L494 400M504 218L524 400M450 279H509M440 310H520M430 342H531M420 374H542M440 178H520M448 155L509 201M450 200L509 156M620 292H719M620 319H719M620 346H719M620 373H719M669 240V400M791 323H842M791 347H842M791 371H842',
+  },
+  uk: {
+    label: 'London clocktower · Victorian arches', motif: 'arches',
+    silhouette: 'M238 400V330H290V400ZM340 400V284H400V400ZM456 400V208H468V180H479V138L491 110L503 138V180H514V208H526V400ZM568 400V307H619V276H634V249H648V276H663V307H715V400ZM761 400V343H919V400Z',
+    detail: 'M468 230H514M468 278H514M468 305H514M468 332H514M468 359H514M491 138V180M478 172H504M491 110V85M470 207L491 186L512 207M474 252A17 17 0 1 0 508 252A17 17 0 1 0 474 252M491 239V252L501 259M583 325V400M603 325V400M624 307V400M648 295V400M672 325V400M692 325V400M761 368Q840 259 919 368M766 368H914M792 340V400M818 325V400M844 324V400M870 339V400M895 366V400',
+  },
+  de: {
+    label: 'Brandenburg Gate · Berlin tower', motif: 'grid',
+    silhouette: 'M222 400V315H272V400ZM337 400V343H630V400ZM326 325H640V343H326ZM342 304H624V325H342ZM402 304V285H438V274H529V285H565V304ZM733 400L742 212H733V189H742V114H748V189H757V212H748L760 400ZM814 400V300H870V400Z',
+    detail: 'M350 346V400M371 346V400M399 346V400M420 346V400M448 346V400M469 346V400M497 346V400M518 346V400M546 346V400M567 346V400M595 346V400M616 346V400M341 313H627M343 330H626M438 285V302M529 285V302M455 274L469 259L484 274L499 259L514 274M733 197Q706 184 716 166Q727 148 745 149Q765 148 775 166Q786 184 757 197M721 177H771M745 149V114M745 114V74',
+  },
+  nl: {
+    label: 'Amsterdam canal houses · Water lines', motif: 'waves',
+    silhouette: 'M257 400V286L273 286V270H291V250H308V270H326V286H342V400ZM365 400V263Q395 210 425 263V400ZM450 400V267L488 235L526 267V400ZM551 400V292H567V275H583V257H599V239H615V257H631V275H647V292H663V400ZM687 400V280Q718 249 749 280V400ZM775 400V302L812 265L849 302V400Z',
+    detail: 'M274 308H288V329H274ZM310 308H324V329H310ZM274 352H288V374H274ZM310 352H324V374H310ZM382 285H395V307H382ZM406 285H419V307H406ZM383 336H395V359H383ZM406 336H419V359H406ZM465 285H479V308H465ZM498 285H512V308H498ZM465 338H479V361H465ZM498 338H512V361H498ZM567 310H583V331H567ZM604 310H620V331H604ZM641 310H650V331H641ZM582 366Q607 340 632 366V400M687 314H749M706 280V400M731 280V400M240 414Q300 405 360 414T480 414T600 414T720 414T840 414T960 414',
+  },
+  ie: {
+    label: 'Samuel Beckett Bridge · Celtic curves', motif: 'knot',
+    silhouette: 'M230 400V326H282V400ZM310 400V290H354V400ZM400 400V349H875V361H400ZM628 349Q703 244 707 154Q744 251 789 349ZM857 400V285H904V400Z',
+    detail: 'M707 154L415 349M710 176L448 349M715 198L483 349M721 220L519 349M729 241L553 349M738 263L589 349M747 283L625 349M757 305L663 349M768 326L700 349M415 361V400M857 361V400M238 341H274M238 365H274M320 310H344M320 336H344M320 362H344M320 388H344M398 417Q490 408 582 417T766 417T950 417',
+  },
+  pl: {
+    label: 'Warsaw Palace · Paper-cut rosettes', motif: 'rosette',
+    silhouette: 'M231 400V309H280V400ZM328 400V340H385V400ZM405 400V304H436V258H467V192H483V163H502V126H510V163H529V192H545V258H576V304H607V400ZM660 400V276H706V400ZM747 400V321H799V400ZM835 400V292H887V400Z',
+    detail: 'M405 328H607M436 280H576M467 215H545M467 239H545M483 182H529M506 126V94M449 305V400M472 305V400M495 305V400M518 305V400M541 305V400M564 305V400M587 328V400M480 280H532M480 290H532M669 296H697M669 321H697M669 346H697M669 371H697M756 342H790M756 368H790',
+  },
+  it: {
+    label: 'Milan Duomo · Renaissance geometry', motif: 'mosaic',
+    silhouette: 'M230 400V320H280V400ZM352 400V301L371 279V252H381V229H390V252H400V279L418 301L441 277V248H451V222H460V248H470V277L494 250V222H505V191H514V222H525V250L551 277V248H561V222H570V248H581V277L604 301L623 279V252H633V229H642V252H652V279L672 301V400ZM746 400V309H801V400ZM835 400V339H894V400Z',
+    detail: 'M368 316H657M372 337V400M397 319V400M424 311V400M450 292V400M478 278V400M510 262V400M543 278V400M570 292V400M597 311V400M626 319V400M652 337V400M481 400V354Q510 318 539 354V400M372 337L385 323L397 337M424 331L437 317L450 331M570 331L583 317L597 331M626 337L639 323L652 337M492 300A18 18 0 1 0 528 300A18 18 0 1 0 492 300',
+  },
+  fr: {
+    label: 'Eiffel silhouette · Art Nouveau lines', motif: 'flow',
+    silhouette: 'M235 400V309H290V400ZM375 400Q438 302 473 190L487 128H495L509 190Q544 302 607 400H552Q492 313 430 400ZM457 242H527V255H457ZM415 322H569V335H415ZM665 400V302H717V400ZM749 400V340H804V400ZM837 400V320H892V400Z',
+    detail: 'M487 128V91M473 190H509M475 190L516 231M507 190L465 231M459 254L544 310M525 254L438 310M427 335L485 380M557 335L500 380M448 283H535M462 242L480 212L507 242M386 400H600M678 324H705M678 351H705M678 378H705M760 357H793M760 381H793M848 340H881M848 367H881',
+  },
+  es: {
+    label: 'Barcelona spires · Trencadís mosaic', motif: 'mosaic',
+    silhouette: 'M223 400V326H275V400ZM350 400V312L366 300V256L373 245V206L381 184L389 206V245L396 256V300L413 312V400ZM435 400V278L450 266V215L458 206V172L467 149L476 172V206L484 215V266L498 278V400ZM521 400V278L535 266V215L543 206V172L552 149L561 172V206L569 215V266L584 278V400ZM605 400V312L622 300V256L629 245V206L637 184L645 206V245L652 256V300L668 312V400ZM740 400V301H801V400ZM836 400V335H895V400Z',
+    detail: 'M366 282H396M366 303H396M450 245H484M450 266H484M535 245H569M535 266H569M622 282H652M622 303H652M371 331V378M390 331V378M456 300V375M478 300V375M541 300V375M563 300V375M628 331V378M647 331V378M498 400V352Q510 327 521 352V400M467 149V128M552 149V128M381 184V165M637 184V165',
+  },
+  balkan: {
+    label: 'Mostar stone bridge · Balkan weave', motif: 'weave',
+    silhouette: 'M220 400V308H254V279H273V308H307V400ZM342 400V341Q530 164 720 341V400H680Q531 247 383 400ZM752 400V290H798V400ZM830 400V314L862 282L894 314V400Z',
+    detail: 'M350 351Q531 183 711 351M368 371Q531 223 694 371M385 337L406 362M414 312L434 339M447 288L464 320M482 273L491 307M518 267V302M552 268L549 303M587 277L577 311M621 292L605 326M652 315L631 345M681 339L658 367M234 329H293M234 351H293M234 373H293M764 309H787M764 334H787M764 359H787M236 421Q320 409 404 421T572 421T740 421T908 421',
+  },
+  tr: {
+    label: 'Istanbul domes · Bosphorus lines', motif: 'rosette',
+    silhouette: 'M229 400V336H278V400ZM360 400V322H390V292H421V260Q421 197 499 197Q577 197 577 260V292H609V322H639V400ZM339 400V250H332V236H341V180L350 160L359 180V236H368V250H361V400ZM661 400V250H654V236H663V180L672 160L681 180V236H690V250H683V400ZM752 400V302H806V400ZM837 400V339H894V400Z',
+    detail: 'M421 260H577M390 292H609M360 322H639M499 197V173M490 182H508M451 260Q451 225 499 219Q547 225 547 260M385 350Q400 326 415 350V400M436 350Q451 326 466 350V400M484 350Q499 326 514 350V400M534 350Q549 326 564 350V400M584 350Q599 326 614 350V400M340 264H361M662 264H683M350 180V236M672 180V236M760 322H798M760 349H798M760 376H798',
+  },
+  ua: {
+    label: 'Kyiv bell tower · Embroidered geometry', motif: 'weave',
+    silhouette: 'M232 400V324H280V400ZM345 400V323H381V280H414V244H433V218Q421 192 443 180Q465 192 453 218V244H472V280H505V323H541V400ZM585 400V307H607V267H623V237Q605 214 629 193Q653 214 635 237V267H651V307H673V400ZM747 400V321H804V400ZM837 400V347H899V400Z',
+    detail: 'M345 335H541M381 291H505M414 254H472M397 323V400M489 323V400M425 400V354Q443 328 461 354V400M428 277H458M443 180V156M434 167H452M585 321H673M607 279H651M618 307V367M640 307V367M629 193V171M620 181H638M756 340H795M756 368H795M238 343H273M238 367H273',
+  },
+  ge: {
+    label: 'Tbilisi balconies · Mountain contours', motif: 'arches',
+    silhouette: 'M204 400L348 266L432 338L534 222L688 400ZM363 400V329H421V400ZM454 400V294L486 273L518 294V400ZM549 400V307H619V400ZM650 400V267L686 242L722 267V400ZM756 400V328H835V400ZM864 400V339H915V400Z',
+    detail: 'M366 349H419M366 363H419M373 349V363M385 349V363M397 349V363M409 349V363M462 320H511M462 339H511M469 320V339M482 320V339M495 320V339M507 320V339M556 333H613M556 351H613M563 333V351M576 333V351M589 333V351M602 333V351M658 293H714M658 311H714M666 293V311M680 293V311M694 293V311M708 293V311M770 400V360Q792 339 814 360V400',
+  },
+  us: {
+    label: 'New York skyline · Deco rays', motif: 'grid',
+    silhouette: 'M228 400V309H276V400ZM310 400V262H358V400ZM389 400V238H402V211H415V183H430V129H437V183H452V211H465V238H478V400ZM516 400V285H572V400ZM611 400V219H627V196H640V172H650V144H656V172H666V196H679V219H695V400ZM730 400V309H788V400ZM822 400V265H879V400Z',
+    detail: 'M402 252H465M402 278H465M402 304H465M402 330H465M402 356H465M402 382H465M430 195H450M434 129V103M627 233H679M627 258H679M627 283H679M627 308H679M627 333H679M627 358H679M627 383H679M653 144V117M323 281H345M323 307H345M323 333H345M323 359H345M323 385H345M835 285H866M835 310H866M835 335H866M835 360H866M835 385H866',
+  },
+  br: {
+    label: 'Rio Sugarloaf · Copacabana waves', motif: 'waves',
+    silhouette: 'M208 400Q222 336 258 300Q292 271 326 316Q350 344 363 400ZM350 400Q376 328 413 267Q449 205 484 211Q527 217 542 299Q562 367 593 400ZM634 400V300H678V400ZM710 400V274H763V400ZM800 400V323H855V400ZM879 400V347H925V400Z',
+    detail: 'M241 358Q277 310 312 343M393 334Q431 247 472 234M427 296Q459 247 485 247M428 400Q442 355 467 327M646 320H666M646 348H666M646 376H666M724 295H750M724 321H750M724 347H750M724 373H750M812 343H842M812 371H842M213 415Q250 390 287 415T361 415T435 415T509 415T583 415T657 415T731 415T805 415T879 415T953 415',
+  },
+  ca: {
+    label: 'CN Tower · Canadian mountain contours', motif: 'stars',
+    silhouette: 'M215 400L326 294L376 343L435 281L539 400ZM406 400L417 230H403V207H416V95H424V207H437V230H424L436 400ZM505 400V307H554V400ZM592 400V258H649V400ZM688 400V289H745V400ZM785 400V327H843V400ZM877 400V351H923V400Z',
+    detail: 'M405 207Q390 196 405 185H435Q450 196 435 207M403 218H437M420 95V62M311 309L326 325L344 312M414 304L435 324L454 304M517 327H542M517 353H542M517 379H542M604 278H637M604 306H637M604 334H637M604 362H637M604 390H637M700 309H733M700 336H733M700 363H733M700 390H733',
+  },
+  ar: {
+    label: 'Buenos Aires Obelisk · Fileteado curves', motif: 'flow',
+    silhouette: 'M229 400V320H281V400ZM320 400V286H370V400ZM434 400L441 181L454 146L467 181L474 400ZM532 400V318H557V284H574V255H591V233H621V255H638V284H655V318H681V400ZM738 400V300H791V400ZM830 400V335H888V400Z',
+    detail: 'M454 146V400M441 181H467M446 198H462M532 331H681M557 296H655M574 267H638M591 245H621M574 331V400M597 331V400M620 331V400M643 331V400M591 284H621M331 307H359M331 333H359M331 359H359M331 385H359M749 321H780M749 348H780M749 375H780M840 356H878M840 382H878',
+  },
+  ae: {
+    label: 'Dubai skyline · Mashrabiya geometry', motif: 'batik',
+    silhouette: 'M220 400V331H270V400ZM309 400V274H356V400ZM406 400V312H417V255H429V207H440V168H448V131H456V91H462V131H470V168H478V207H488V255H500V312H511V400ZM566 400Q566 262 641 195L655 400ZM704 400V287H753V400ZM800 400V252H848V400ZM876 400V320H924V400Z',
+    detail: 'M417 325H500M417 346H500M417 367H500M429 270H488M429 291H488M440 221H478M440 243H478M448 181H470M448 201H470M459 91V57M459 133V400M578 375L641 195L645 375ZM590 326H647M600 289H645M617 244H643M809 270H840M809 294H840M809 318H840M809 342H840M809 366H840M809 390H840',
+  },
+  ng: {
+    label: 'Lagos bridge · Adire geometry', motif: 'weave',
+    silhouette: 'M222 400V326H270V400ZM309 400V285H360V400ZM399 400V345H915V358H399ZM520 345V222H535V345ZM759 345V222H774V345ZM825 400V292H874V400Z',
+    detail: 'M527 222L400 345M527 242L432 345M527 262L463 345M527 282L495 345M527 222L655 345M527 242L623 345M527 262L591 345M527 282L559 345M766 222L639 345M766 242L671 345M766 262L703 345M766 282L734 345M766 222L894 345M766 242L862 345M766 262L830 345M766 282L799 345M527 358V400M766 358V400M320 305H349M320 333H349M320 361H349M320 389H349M399 417Q468 405 537 417T675 417T813 417T951 417',
+  },
+};
+
+export const REGION_ART: Readonly<Record<string, { readonly label: string }>> = Object.fromEntries(
+  Object.entries(ART).map(([id, art]) => [id, { label: art.label }]),
+);
+
+export function getRegionArtLabel(id: string): string {
+  return ART[id]?.label ?? 'Global connections · Orbital lines';
+}
+
+const pathCache = new Map<string, Path2D>();
+
+function cachedPath(data: string): Path2D {
+  let path = pathCache.get(data);
+  if (!path) {
+    path = new Path2D(data);
+    pathCache.set(data, path);
+  }
+  return path;
+}
+
+function line(ctx: CanvasRenderingContext2D, x1: number, y1: number, x2: number, y2: number): void {
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+}
+
+function circle(ctx: CanvasRenderingContext2D, x: number, y: number, radius: number): void {
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, Math.PI * 2);
+  ctx.stroke();
+}
+
+function petal(ctx: CanvasRenderingContext2D, length: number, width: number): void {
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.bezierCurveTo(-width, -length * 0.42, -width * 0.6, -length * 0.82, 0, -length);
+  ctx.bezierCurveTo(width * 0.6, -length * 0.82, width, -length * 0.42, 0, 0);
+  ctx.stroke();
+}
+
+/** Small, geometric culture references kept separate from the architecture. */
+function motif(ctx: CanvasRenderingContext2D, kind: RegionalIllustration['motif']): void {
+  ctx.save();
+  ctx.translate(790, 124);
+  if (kind === 'lotus') {
+    for (const angle of [-1.05, -0.55, 0, 0.55, 1.05]) {
+      ctx.save();
+      ctx.rotate(angle);
+      petal(ctx, 108, 33);
+      ctx.restore();
+    }
+    ctx.beginPath();
+    ctx.ellipse(0, 10, 93, 15, 0, 0, Math.PI);
+    ctx.stroke();
+    for (const radius of [126, 136, 146]) circle(ctx, 0, -37, radius);
+  } else if (kind === 'flow' || kind === 'waves') {
+    for (let index = 0; index < 7; index += 1) {
+      ctx.beginPath();
+      ctx.moveTo(-180, -65 + index * 19);
+      ctx.bezierCurveTo(-80, -180 + index * 20, 65, 105 - index * 3, 180, -30 + index * 19);
+      ctx.stroke();
+    }
+    if (kind === 'flow') {
+      circle(ctx, -6, -16, 101);
+      circle(ctx, -6, -16, 112);
+    }
+  } else if (kind === 'stars') {
+    const stars = [[-80, -47, 7], [15, -107, 9], [35, 28, 8], [105, -32, 6], [-2, -14, 4]];
+    stars.forEach(([x, y, radius]) => {
+      ctx.beginPath();
+      for (let index = 0; index < 8; index += 1) {
+        const angle = index * Math.PI / 4 - Math.PI / 2;
+        const r = index % 2 ? radius * 0.28 : radius;
+        const px = x + Math.cos(angle) * r;
+        const py = y + Math.sin(angle) * r;
+        if (index === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.stroke();
+    });
+    circle(ctx, 0, -35, 145);
+    circle(ctx, 0, -35, 159);
+  } else if (kind === 'blossom' || kind === 'orchid' || kind === 'petals') {
+    const count = kind === 'petals' ? 8 : 5;
+    const positions = kind === 'blossom' ? [[-77, -57, 52], [45, -8, 69], [93, -99, 35]] : [[0, -24, 108]];
+    positions.forEach(([x, y, size]) => {
+      ctx.save();
+      ctx.translate(x, y);
+      for (let index = 0; index < count; index += 1) {
+        ctx.save();
+        ctx.rotate(index * Math.PI * 2 / count);
+        petal(ctx, size, size * 0.42);
+        ctx.restore();
+      }
+      circle(ctx, 0, 0, size * 0.13);
+      ctx.restore();
+    });
+    if (kind === 'blossom') {
+      ctx.beginPath();
+      ctx.moveTo(-142, 83);
+      ctx.bezierCurveTo(-112, -1, 30, -57, 112, -117);
+      ctx.stroke();
+    }
+  } else if (kind === 'shanyrak') {
+    for (const radius of [77, 86, 111, 119]) circle(ctx, 0, -19, radius);
+    for (let index = 0; index < 24; index += 1) {
+      const angle = index * Math.PI / 12;
+      line(ctx, Math.cos(angle) * 87, Math.sin(angle) * 87 - 19, Math.cos(angle) * 110, Math.sin(angle) * 110 - 19);
+    }
+    for (const offset of [-36, -12, 12, 36]) {
+      ctx.beginPath();
+      ctx.ellipse(0, -19, 77, 37 + Math.abs(offset) * 0.5, offset * Math.PI / 180, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+  } else if (kind === 'arches' || kind === 'knot') {
+    for (let index = 0; index < 5; index += 1) {
+      ctx.save();
+      ctx.rotate(index * Math.PI * 2 / 5);
+      ctx.beginPath();
+      ctx.ellipse(0, -35, 60, 98, Math.PI / 5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+  } else if (kind === 'weave' || kind === 'batik' || kind === 'mosaic' || kind === 'grid') {
+    const step = kind === 'weave' ? 42 : 57;
+    for (let row = -2; row <= 2; row += 1) {
+      for (let col = -2; col <= 2; col += 1) {
+        const x = col * step;
+        const y = row * step - 25;
+        const radius = step * 0.4;
+        ctx.beginPath();
+        ctx.moveTo(x, y - radius);
+        ctx.lineTo(x + radius, y);
+        ctx.lineTo(x, y + radius);
+        ctx.lineTo(x - radius, y);
+        ctx.closePath();
+        ctx.stroke();
+        if (kind === 'batik') circle(ctx, x, y, radius * 0.28);
+        if (kind === 'weave') {
+          line(ctx, x - radius * 0.5, y, x + radius * 0.5, y);
+          line(ctx, x, y - radius * 0.5, x, y + radius * 0.5);
+        }
+      }
+    }
+  } else {
+    const count = kind === 'rosette' ? 12 : 16;
+    circle(ctx, 0, -20, 109);
+    circle(ctx, 0, -20, 119);
+    for (let index = 0; index < count; index += 1) {
+      ctx.save();
+      ctx.translate(0, -20);
+      ctx.rotate(index * Math.PI * 2 / count);
+      petal(ctx, 105, 24);
+      ctx.restore();
+    }
+    circle(ctx, 0, -20, 31);
+  }
+  ctx.restore();
+}
+
+function architecture(ctx: CanvasRenderingContext2D, art: RegionalIllustration | undefined, variant: 'boarding' | 'poster' | 'minimal'): void {
+  if (!art) return;
+  const silhouette = cachedPath(art.silhouette);
+  ctx.globalAlpha = variant === 'boarding' ? 0.12 : variant === 'minimal' ? 0.05 : 0.075;
+  ctx.fill(silhouette);
+  ctx.globalAlpha = variant === 'boarding' ? 0.84 : variant === 'minimal' ? 0.4 : 0.5;
+  ctx.stroke(silhouette);
+  ctx.globalAlpha = variant === 'boarding' ? 0.57 : variant === 'minimal' ? 0.27 : 0.32;
+  ctx.lineWidth = variant === 'boarding' ? 2.4 : variant === 'minimal' ? 1.75 : 1.45;
+  ctx.stroke(cachedPath(art.detail));
+}
+
+/**
+ * Fits a complete regional vignette inside an explicit artwork panel.
+ * Narrow panels keep the architecture's proportions; wide panels place a
+ * separate cultural motif on the left and extend the horizon across the panel.
+ */
+export function drawRegionArtScene(
+  ctx: CanvasRenderingContext2D,
+  chapterId: string,
+  width: number,
+  height: number,
+  accent: string,
+  variant: 'boarding' | 'poster' | 'minimal',
+): void {
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return;
+  const art = ART[chapterId];
+  const color = /^#[\da-f]{6}$/i.test(accent) ? accent : '#b6ff4e';
+  const scale = Math.min(height / 470, width / 1000);
+  const baseline = height * 0.92;
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0, 0, width, height);
+  ctx.clip();
+  ctx.fillStyle = color;
+  ctx.strokeStyle = color;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+
+  ctx.save();
+  ctx.translate(width - 970 * scale, baseline - 400 * scale);
+  ctx.scale(scale, scale);
+  ctx.lineWidth = variant === 'boarding' ? 3.6 : variant === 'minimal' ? 2.1 : 2.3;
+  architecture(ctx, art, variant);
+  ctx.restore();
+
+  ctx.save();
+  const motifScale = Math.min(height / 420, width * 0.27 / 360);
+  ctx.translate(width * 0.16, height * 0.47);
+  ctx.scale(motifScale, motifScale);
+  ctx.translate(-790, -105);
+  ctx.lineWidth = variant === 'boarding' ? 3.1 : 2;
+  ctx.globalAlpha = variant === 'boarding' ? 0.43 : variant === 'minimal' ? 0.19 : 0.24;
+  motif(ctx, art?.motif ?? 'flow');
+  ctx.restore();
+
+  ctx.lineWidth = variant === 'boarding' ? 1.1 : 0.8;
+  ctx.globalAlpha = variant === 'boarding' ? 0.53 : variant === 'minimal' ? 0.24 : 0.35;
+  line(ctx, 0, baseline, width, baseline);
+  ctx.globalAlpha *= 0.45;
+  line(ctx, width * 0.06, baseline + 5, width, baseline + 5);
+  ctx.restore();
+}
+
+/** Paint before foreground text, logos and portraits; the background stays transparent. */
+export function drawRegionArt(
+  ctx: CanvasRenderingContext2D,
+  chapterId: string,
+  width: number,
+  height: number,
+  accent: string,
+  variant: 'boarding' | 'poster' | 'minimal',
+): void {
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return;
+  const art = ART[chapterId];
+  const color = /^#[\da-f]{6}$/i.test(accent) ? accent : '#b6ff4e';
+  const isStory = height / width > 1.5;
+  const isLandscape = width / height > 1.3;
+  const artWidth = width * (isLandscape ? 0.9 : 1.18);
+  const artHeight = artWidth * 0.44;
+  const baseline = height * (isStory ? 0.66 : isLandscape ? 0.73 : 0.68);
+  const left = width - artWidth * (isLandscape ? 0.92 : 0.97);
+  const top = baseline - artHeight * 400 / 440;
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0, 0, width, height);
+  ctx.clip();
+  ctx.translate(left, top);
+  ctx.scale(artWidth / 1000, artHeight / 440);
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = variant === 'boarding' ? 3.2 : variant === 'minimal' ? 1.9 : 2;
+
+  ctx.globalAlpha = variant === 'boarding' ? 0.36 : variant === 'minimal' ? 0.16 : 0.2;
+  motif(ctx, art?.motif ?? 'flow');
+
+  architecture(ctx, art, variant);
+  ctx.globalAlpha = variant === 'boarding' ? 0.5 : variant === 'minimal' ? 0.24 : 0.32;
+  ctx.lineWidth = variant === 'boarding' ? 2.2 : 1.5;
+  line(ctx, 175, 400, 1000, 400);
+  ctx.globalAlpha *= 0.5;
+  line(ctx, 204, 410, 1000, 410);
+  ctx.restore();
+}
