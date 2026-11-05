@@ -2,6 +2,12 @@
   "name": "breakpoint-apac",
   "version": "1.0.0",
   "private": true,
+  "description": "Community card studio for Superteam chapters going to Solana Breakpoint 2026: pick a chapter and design, then export a PNG.",
+  "homepage": "https://breakpoint-apac.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/operatoruplift/breakpoint-apac.git"
+  },
   "packageManager": "pnpm@10.30.1",
   "engines": {
     "node": ">=22.0.0"
